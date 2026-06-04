@@ -249,12 +249,6 @@ const applyLanguage = (language) => {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  try {
-    localStorage.setItem("orion-language", nextLanguage);
-  } catch {
-    // Local storage may be unavailable in strict privacy modes.
-  }
-
   updateMenuLabel();
 };
 
@@ -414,10 +408,4 @@ createCanvasRenderer(document.querySelector("[data-particle-canvas]"), (ctx, wid
   }
 });
 
-let initialLanguage = "zh";
-try {
-  initialLanguage = localStorage.getItem("orion-language") || "zh";
-} catch {
-  initialLanguage = "zh";
-}
-applyLanguage(initialLanguage);
+applyLanguage("zh");

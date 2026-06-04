@@ -291,7 +291,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: min(100svh, 760px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -472,6 +472,7 @@ section[id] {
 
 .workflow {
   background: var(--bg-soft);
+  padding-top: 64px;
 }
 
 .workflow-heading {
@@ -993,7 +994,7 @@ section[id] {
   .hero {
     display: grid;
     min-height: auto;
-    padding: 104px 18px 54px;
+    padding: 104px 18px 22px;
   }
 
   .hero::before {
@@ -1068,6 +1069,10 @@ section[id] {
 
   .hero {
     padding-top: 96px;
+  }
+
+  .workflow {
+    padding-top: 24px;
   }
 
   .hero h1,
