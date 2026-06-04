@@ -53,11 +53,11 @@ const translations = {
     },
     step3: {
       title: "裝置端評分",
-      body: "嵌入式 Python 服務擷取頻帶功率，與 Trial 0 基準比較後即時計算 SRI/ARI。",
+      body: "Android 系統與嵌入式架構會擷取頻帶特徵，與 Trial 0 基準比較後即時計算 SRI/ARI。",
     },
     step4: {
       title: "同步雲端",
-      body: "完成的 session 透過 API Key 驗證後上傳至 FastAPI 與 PostgreSQL，保存長期研究資料。",
+      body: "完成的 session 可同步至雲端資料庫資料存儲，方便後續保存、檢視與研究分析。",
     },
     metric: {
       sri: "SRI 分數",
@@ -70,7 +70,7 @@ const translations = {
         "SRI 以 Alpha/Theta 放鬆頻帶相對於 Beta 警覺頻帶的變化為核心，並將每個香氣試驗與受測者自己的無香氣基準比較。",
       point1: "擷取 Delta、Theta、Alpha、Beta、Gamma 等頻帶特徵。",
       point2: "保留 artifact、樣本數與資料品質狀態，方便研究回溯。",
-      point3: "雲端 schema 可支援 session 檢視與後續 ML 資料匯出。",
+      point3: "雲端資料存儲支援 session 檢視與後續研究分析。",
     },
     panel: {
       overview: "Session overview",
@@ -83,8 +83,8 @@ const translations = {
         "為研究團隊、診所與身心健康實驗室打造的完整產品流程，用可量測的腦波指標觀察香氣如何改變身心狀態。",
       item1: "Muse 2 / Muse S 腦波擷取",
       item2: "六種香氣測試流程",
-      item3: "Android App 與嵌入式 Python 後端",
-      item4: "FastAPI 與 PostgreSQL 雲端資料庫",
+      item3: "Android 系統與嵌入式架構",
+      item4: "雲端資料庫資料存儲",
     },
     contact: {
       title: "把客觀香氛研究帶進你的實驗室。",
@@ -151,11 +151,11 @@ const translations = {
     },
     step3: {
       title: "On-device scoring",
-      body: "The embedded Python service extracts band power, compares against Trial 0, and computes SRI/ARI in real time.",
+      body: "The Android system and embedded architecture extract band features, compare against Trial 0, and compute SRI/ARI in real time.",
     },
     step4: {
       title: "Cloud sync",
-      body: "Completed sessions upload through API-key authentication into FastAPI and PostgreSQL for long-term research records.",
+      body: "Completed sessions can sync to cloud database storage for later review, preservation, and research analysis.",
     },
     metric: {
       sri: "SRI score",
@@ -168,7 +168,7 @@ const translations = {
         "SRI compares relaxation-linked Alpha/Theta activity with alertness-linked Beta activity, then measures each fragrance against the participant's no-fragrance baseline.",
       point1: "Band-power extraction for delta, theta, alpha, beta, and gamma ranges.",
       point2: "Artifact, sample count, and quality status preserved with each trial.",
-      point3: "Cloud schema supports session review and future ML exports.",
+      point3: "Cloud data storage supports session review and future research analysis.",
     },
     panel: {
       overview: "Session overview",
@@ -181,8 +181,8 @@ const translations = {
         "A refined product workflow for research teams, clinics, and wellness labs studying how scent changes measurable brain-state indicators.",
       item1: "Muse 2 / Muse S EEG capture",
       item2: "Six-fragrance test protocol",
-      item3: "Android app with embedded Python backend",
-      item4: "FastAPI and PostgreSQL cloud archive",
+      item3: "Android system with embedded architecture",
+      item4: "Cloud database storage",
     },
     contact: {
       title: "Bring objective fragrance research to your lab.",

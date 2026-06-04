@@ -21,3 +21,10 @@
 - CTA/demo email for this revision: `petrichortpe@gmail.com`.
 - Typography direction: avoid the heavy editorial serif feel; use an elegant, mindful sans-serif system that works for Traditional Chinese and English.
 - Design fidelity target: closer to the concept screenshot, especially hero integration, compact nav, warm clinical background, workflow section immediately after the hero, dark science band, kit section, and final contact band.
+
+## 2026-06-04 prompt 3
+
+- Front-facing website copy should not expose implementation details such as FastAPI, PostgreSQL, API keys, schemas, or Python backend internals.
+- Preferred product-language framing: "Android 系統與嵌入式架構" and "雲端資料庫資料存儲" rather than backend technology names.
+- Workflow card icons should sit visually above the media card with a clear z-index and border, keeping the half-overlap look without appearing hidden behind the image.
+- Brainstorming direction requested: mindful product interactions that make the site feel calmer and more interactive without becoming gimmicky.
