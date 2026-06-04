@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Orion 是結合 Muse EEG、嗅覺測試流程、SRI/ARI 分析與雲端資料保存的腦波香氛研究平台。"
+      data-i18n-attr="content:meta.description"
+    />
+    <meta name="theme-color" content="#f7f4ee" />
+    <title data-i18n="meta.title">Orion | EEG 香氛研究平台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='12' fill='none' stroke='%230f5b52' stroke-width='3'/%3E%3Cpath d='M20 4v8M20 28v8M4 20h8M28 20h8' stroke='%230f5b52' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M30 10 35 5' stroke='%23d58a14' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" as="image" href="assets/orion-hero.webp" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Orion home" data-i18n-attr="aria-label:aria.home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <circle cx="20" cy="20" r="13" />
+            <path d="M20 4v7M20 29v7M4 20h7M29 20h7" />
+            <path d="M29.2 10.8 34 6M6 34l4.8-4.8" />
+          </svg>
+        </span>
+        <span>Orion</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation" data-i18n-attr="aria-label:aria.primaryNav">
+        <a href="#product" data-i18n="nav.product">產品</a>
+        <a href="#workflow" data-i18n="nav.workflow">流程</a>
+        <a href="#science" data-i18n="nav.science">科學</a>
+        <a href="#contact" data-i18n="nav.contact">聯絡</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switch" aria-label="Language switch" data-i18n-attr="aria-label:aria.language">
+          <button type="button" class="is-active" data-lang-option="zh">繁中</button>
+          <button type="button" data-lang-option="en">EN</button>
+        </div>
+        <a
+          class="header-cta"
+          href="mailto:petrichortpe@gmail.com?subject=Orion%20demo%20request"
+          data-demo-link
+        >
+          <span data-i18n="cta.demo">預約展示</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M5 10h10M11 6l4 4-4 4" />
+          </svg>
+        </a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-menu-button
+          data-i18n-attr="aria-label:aria.openMenu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav data-i18n-attr="aria-label:aria.mobileNav">
+      <a href="#product" data-i18n="nav.product">產品</a>
+      <a href="#workflow" data-i18n="nav.workflow">流程</a>
+      <a href="#science" data-i18n="nav.science">科學</a>
+      <a href="#contact" data-i18n="nav.contact">聯絡</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <picture class="hero-bg reveal">
+          <source srcset="assets/orion-hero.webp" type="image/webp" />
+          <img
+            src="assets/orion-hero.png"
+            alt="Muse-style EEG headband, fragrance atomizers, and tablet analytics on a clinical lab desk"
+            width="1586"
+            height="992"
+            fetchpriority="high"
+            data-i18n-attr="alt:alt.hero"
+          />
+        </picture>
+        <canvas class="wave-canvas" data-wave-canvas aria-hidden="true"></canvas>
+        <div class="hero-copy reveal">
+          <h1 data-i18n="hero.title">用 EEG 理解香氣如何影響身心狀態。</h1>
+          <p data-i18n="hero.body">
+            Orion 結合 Muse 腦波擷取、引導式嗅覺測試與基準化 SRI/ARI 演算法，客觀量化香氣對放鬆與睡眠準備度的變化。
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="mailto:petrichortpe@gmail.com?subject=Orion%20demo%20request"
+              data-demo-link
+            >
+              <span data-i18n="cta.demo">預約展示</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M5 10h10M11 6l4 4-4 4" />
+              </svg>
+            </a>
+            <a class="button secondary" href="#workflow">
+              <span data-i18n="cta.workflow">查看流程</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10 4v12M6 12l4 4 4-4" />
+              </svg>
+            </a>
+          </div>
+          <div class="hero-proof" aria-label="Platform highlights" data-i18n-attr="aria-label:aria.highlights">
+            <span data-i18n="proof.device">Muse 2 / Muse S 腦波整合</span>
+            <span data-i18n="proof.protocol">引導式嗅覺流程</span>
+            <span data-i18n="proof.scoring">裝置端 SRI / ARI 評分</span>
+            <span data-i18n="proof.cloud">安全雲端保存與同步</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflow" id="workflow">
+        <div class="workflow-heading reveal">
+          <h2 data-i18n="workflow.title">從設定到洞察，四步完成研究流程</h2>
+          <p data-i18n="workflow.body">Orion 讓受測者保持平靜，同時保留可重複、可追蹤、可分析的研究資料結構。</p>
+        </div>
+        <div class="workflow-grid">
+          <article class="step reveal" data-step="0">
+            <span class="step-number">1</span>
+            <div class="step-image step-device" aria-hidden="true"></div>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 14a6 6 0 1 1 12 0" />
+                <path d="M5 14c0 2 1.5 3 3 3h1v-5H8c-1.7 0-3 1.1-3 2Z" />
+                <path d="M19 14c0 2-1.5 3-3 3h-1v-5h1c1.7 0 3 1.1 3 2Z" />
+              </svg>
+            </div>
+            <h3 data-i18n="step1.title">連接 Muse</h3>
+            <p data-i18n="step1.body">透過 LibMuse BLE 橋接 Muse 2 或 Muse S，也保留 OSC 模式支援既有串流流程。</p>
+          </article>
+          <article class="step reveal" data-step="1">
+            <span class="step-number">2</span>
+            <div class="step-image step-session" aria-hidden="true"></div>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18" />
+                <path d="M7 7c-2 2-2 5 0 7 1.5 1.5 3.5 2 5 2" />
+                <path d="M17 7c2 2 2 5 0 7-1.5 1.5-3.5 2-5 2" />
+              </svg>
+            </div>
+            <h3 data-i18n="step2.title">執行香氣測試</h3>
+            <p data-i18n="step2.body">受測者依照語音與畫面完成準備、嗅聞與休息階段，建立穩定的測試節奏。</p>
+          </article>
+          <article class="step reveal" data-step="2">
+            <span class="step-number">3</span>
+            <div class="step-score" aria-hidden="true">
+              <span data-i18n="metric.sri">SRI 分數</span>
+              <strong>78</strong>
+              <small data-i18n="metric.calm">平靜、放鬆</small>
+              <i></i>
+            </div>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 4v16M16 4v16" />
+                <path d="M5 9h14M5 15h14" />
+              </svg>
+            </div>
+            <h3 data-i18n="step3.title">裝置端評分</h3>
+            <p data-i18n="step3.body">嵌入式 Python 服務擷取頻帶功率，與 Trial 0 基準比較後即時計算 SRI/ARI。</p>
+          </article>
+          <article class="step reveal" data-step="3">
+            <span class="step-number">4</span>
+            <div class="step-cloud" aria-hidden="true">
+              <svg viewBox="0 0 120 92">
+                <path d="M38 72h48c15 0 25-9 25-22 0-12-9-21-21-22C85 16 75 9 62 9 47 9 36 18 32 31 20 32 10 41 10 53c0 12 10 19 28 19Z" />
+                <path d="M60 61V36M49 47l11-11 11 11" />
+              </svg>
+              <span data-i18n="metric.uploaded">Session uploaded</span>
+            </div>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 16V5M8 9l4-4 4 4" />
+                <path d="M5 15v3h14v-3" />
+              </svg>
+            </div>
+            <h3 data-i18n="step4.title">同步雲端</h3>
+            <p data-i18n="step4.body">完成的 session 透過 API Key 驗證後上傳至 FastAPI 與 PostgreSQL，保存長期研究資料。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="science" id="science">
+        <div class="science-copy reveal">
+          <h2 data-i18n="science.title">以腦波資料支持香氣研究</h2>
+          <p data-i18n="science.body">
+            SRI 以 Alpha/Theta 放鬆頻帶相對於 Beta 警覺頻帶的變化為核心，並將每個香氣試驗與受測者自己的無香氣基準比較。
+          </p>
+          <ul class="check-list">
+            <li data-i18n="science.point1">擷取 Delta、Theta、Alpha、Beta、Gamma 等頻帶特徵。</li>
+            <li data-i18n="science.point2">保留 artifact、樣本數與資料品質狀態，方便研究回溯。</li>
+            <li data-i18n="science.point3">雲端 schema 可支援 session 檢視與後續 ML 資料匯出。</li>
+          </ul>
+        </div>
+        <div class="dashboard-panel reveal" aria-label="Animated EEG analytics preview" data-i18n-attr="aria-label:aria.analytics">
+          <div class="panel-top">
+            <span data-i18n="panel.overview">Session overview</span>
+            <span data-i18n="panel.trial">Trial 3 / 6</span>
+          </div>
+          <div class="eeg-lines" aria-hidden="true">
+            <svg viewBox="0 0 640 220" preserveAspectRatio="none">
+              <path class="line-a" d="M0 44 C56 20 78 78 130 48 S210 30 262 58 342 84 402 46 520 20 640 56" />
+              <path class="line-b" d="M0 94 C44 120 96 68 148 96 S236 132 294 88 384 54 452 104 552 138 640 86" />
+              <path class="line-c" d="M0 150 C64 132 92 176 156 146 S258 116 312 156 414 188 486 142 570 116 640 158" />
+            </svg>
+          </div>
+          <div class="score-row">
+            <div>
+              <span class="metric-label" data-i18n="metric.sri">SRI 分數</span>
+              <strong data-counter data-target="78">0</strong>
+              <small data-i18n="metric.calm">平靜、放鬆</small>
+            </div>
+            <div class="bar-chart" aria-hidden="true">
+              <span style="--h: 46%"></span>
+              <span style="--h: 74%"></span>
+              <span style="--h: 68%"></span>
+              <span style="--h: 31%"></span>
+              <span style="--h: 52%"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="kit-section" id="product">
+        <div class="kit-image reveal">
+          <picture>
+            <source srcset="assets/orion-kit.webp" type="image/webp" />
+            <img
+              src="assets/orion-kit.png"
+              alt="Open Orion fragrance research kit with six atomizers, fabric swatches, Muse-style headband, tablet, and fragrance bottle"
+              width="1448"
+              height="1086"
+              loading="lazy"
+              data-i18n-attr="alt:alt.kit"
+            />
+          </picture>
+        </div>
+        <div class="kit-copy reveal">
+          <span class="section-kicker" data-i18n="kit.kicker">Orion 研究套組</span>
+          <h2 data-i18n="kit.title">嚴謹香氛研究所需的一切。</h2>
+          <p data-i18n="kit.body">
+            為研究團隊、診所與身心健康實驗室打造的完整產品流程，用可量測的腦波指標觀察香氣如何改變身心狀態。
+          </p>
+          <div class="kit-list">
+            <span data-i18n="kit.item1">Muse 2 / Muse S 腦波擷取</span>
+            <span data-i18n="kit.item2">六種香氣測試流程</span>
+            <span data-i18n="kit.item3">Android App 與嵌入式 Python 後端</span>
+            <span data-i18n="kit.item4">FastAPI 與 PostgreSQL 雲端資料庫</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact">
+        <canvas class="particle-canvas" data-particle-canvas aria-hidden="true"></canvas>
+        <div class="contact-copy reveal">
+          <h2 data-i18n="contact.title">把客觀香氛研究帶進你的實驗室。</h2>
+          <p data-i18n="contact.body">
+            與我們討論如何導入 Orion，建立 EEG 引導的嗅覺測試、受測者流程與雲端研究紀錄。
+          </p>
+        </div>
+        <div class="contact-actions reveal">
+          <a
+            class="button primary"
+            href="mailto:petrichortpe@gmail.com?subject=Orion%20demo%20request"
+            data-demo-link
+          >
+            <span data-i18n="cta.demo">預約展示</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 10h10M11 6l4 4-4 4" />
+            </svg>
+          </a>
+          <a class="button dark-outline" href="mailto:petrichortpe@gmail.com" data-contact-link>
+            <span data-i18n="cta.contact">聯絡我們</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 10h10M11 6l4 4-4 4" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footer.product">Orion EEG 香氛研究平台</span>
+      <span data-i18n="footer.summary">Muse 擷取。引導式測試。SRI 分析。雲端紀錄。</span>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
