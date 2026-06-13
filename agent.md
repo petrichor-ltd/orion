@@ -75,3 +75,10 @@
 - Public copy should be more commercially direct for fundraising readiness, while still implying investor fit through product maturity rather than repeatedly naming investors.
 - Typography direction for this pass: use a more literary Traditional Chinese heading style with `Noto Serif TC` while keeping body/UI text readable with `Noto Sans TC`.
 - Fragrance samples must match `/Users/tobliao/Documents/workspace/petrichor-ltd/orion/orion-sri/config/fragrances.csv`: 乳香、岩蘭草、鼠尾草、依蘭、甜橙、薰衣草. Short labels are preferred over long essential-oil names.
+
+## 2026-06-14 prompt
+
+- User feels the page is too stretched out and not concentrated enough; reduce vertical section length, empty spacing, and large gaps before adding any new sections.
+- The proof/problem area immediately after the hero should be more compact and information-dense. A 2x2 card layout is preferred over tall stacked items on desktop.
+- Current serif heading direction is not acceptable. Use a cleaner, more mature product-facing Traditional Chinese font system; `IBM Plex Sans TC` is preferred for headings and UI, with `Noto Sans TC` as fallback.
+- Copy should push harder toward product value and decision-making: emphasize runnable testing, comparable EEG indicators, recommendation, report delivery, and follow-up momentum.
