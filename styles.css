@@ -21,13 +21,12 @@
   --max: 1200px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --font-ui:
-    "IBM Plex Sans TC", "Noto Sans TC", "PingFang TC", "Hiragino Sans",
-    "Avenir Next", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+    "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Avenir Next",
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   --font-heading:
-    "IBM Plex Sans TC", "Noto Sans TC", "PingFang TC", "Hiragino Sans",
-    "Avenir Next", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+    "Noto Serif TC", "Noto Sans TC", "PingFang TC", "Hiragino Mincho ProN",
+    "Songti TC", serif;
 }
 
 * {
@@ -502,20 +501,20 @@ p {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-heading);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.05;
   letter-spacing: 0;
 }
 
 .hero h1 {
   max-width: 11em;
-  font-size: 3rem;
-  font-weight: 650;
+  font-size: 2.92rem;
+  font-weight: 600;
   overflow-wrap: anywhere;
 }
 
 html[lang="zh-Hant"] .hero h1 {
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.12;
 }
 
@@ -527,7 +526,7 @@ html[lang="zh-Hant"] .science h2,
 html[lang="zh-Hant"] .use-cases-heading h2,
 html[lang="zh-Hant"] .kit-copy h2,
 html[lang="zh-Hant"] .contact-band h2 {
-  font-weight: 620;
+  font-weight: 600;
   line-height: 1.12;
 }
 
@@ -625,7 +624,7 @@ html[lang="zh-Hant"] .contact-band h2 {
 .session-section,
 .use-cases,
 .kit-section {
-  padding: 72px max(24px, calc((100vw - var(--max)) / 2));
+  padding: 64px max(24px, calc((100vw - var(--max)) / 2));
 }
 
 section[id] {
@@ -649,7 +648,7 @@ section[id] {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
-  padding: 0 max(24px, calc((100vw - var(--max)) / 2)) 42px;
+  padding: 0 max(24px, calc((100vw - var(--max)) / 2)) 28px;
   background: var(--bg);
 }
 
@@ -661,8 +660,8 @@ section[id] {
 .proof-item {
   position: relative;
   overflow: hidden;
-  min-height: 138px;
-  padding: 22px 22px;
+  min-height: 118px;
+  padding: 18px 20px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.58);
 }
@@ -708,23 +707,26 @@ section[id] {
 
 .proof-item strong {
   display: block;
-  margin-top: 12px;
+  margin-top: 8px;
   color: var(--ink);
-  font-size: 1.04rem;
+  font-size: 1rem;
   font-weight: 780;
+  line-height: 1.28;
 }
 
 .proof-item p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .problem-section {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(520px, 1.12fr);
-  gap: 44px;
+  gap: 34px;
   align-items: center;
+  padding-top: 56px;
+  padding-bottom: 46px;
   background: var(--surface);
 }
 
@@ -733,7 +735,7 @@ section[id] {
 .session-copy h2,
 .use-cases-heading h2,
 .kit-copy h2 {
-  font-size: 2.88rem;
+  font-size: 2.62rem;
 }
 
 .problem-copy p,
@@ -742,9 +744,9 @@ section[id] {
 .use-cases-heading p,
 .kit-copy p {
   max-width: 600px;
-  margin: 18px 0 0;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
 }
 
 .problem-list {
@@ -755,10 +757,10 @@ section[id] {
 
 .problem-list article {
   display: grid;
-  grid-template-columns: 38px 1fr;
-  gap: 10px 14px;
-  min-height: 152px;
-  padding: 18px;
+  grid-template-columns: 34px 1fr;
+  gap: 8px 12px;
+  min-height: 132px;
+  padding: 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg-soft);
@@ -768,8 +770,8 @@ section[id] {
 .problem-list span {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 31px;
+  height: 31px;
   border-radius: 999px;
   background: var(--teal);
   color: white;
@@ -782,7 +784,7 @@ section[id] {
 .step h3 {
   margin: 0;
   color: #142022;
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 780;
   line-height: 1.25;
 }
@@ -790,9 +792,9 @@ section[id] {
 .problem-list p,
 .use-card p,
 .step p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
 }
 
 .problem-list h3,
@@ -803,8 +805,10 @@ section[id] {
 .thesis-section {
   display: grid;
   grid-template-columns: minmax(340px, 0.72fr) minmax(460px, 1.08fr);
-  gap: 34px;
+  gap: 28px;
   align-items: stretch;
+  padding-top: 44px;
+  padding-bottom: 58px;
   background: linear-gradient(180deg, #fbfaf6 0%, #f1f6f2 100%);
 }
 
@@ -837,8 +841,8 @@ section[id] {
 .thesis-panel {
   display: grid;
   align-content: center;
-  min-height: 460px;
-  padding: clamp(26px, 4vw, 46px);
+  min-height: 390px;
+  padding: clamp(24px, 3.5vw, 40px);
   background: rgba(255, 255, 255, 0.74);
 }
 
@@ -848,18 +852,18 @@ section[id] {
 
 .thesis-points {
   display: grid;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 8px;
+  margin-top: 18px;
 }
 
 .thesis-points span {
   position: relative;
-  padding: 11px 14px 11px 34px;
+  padding: 10px 13px 10px 32px;
   border: 1px solid rgba(13, 90, 81, 0.12);
   border-radius: var(--radius);
   background: rgba(251, 250, 246, 0.78);
   color: var(--muted-strong);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 730;
 }
 
@@ -877,7 +881,7 @@ section[id] {
 }
 
 .thesis-visual {
-  min-height: 500px;
+  min-height: 430px;
   background:
     radial-gradient(circle at 22% 78%, rgba(217, 138, 13, 0.12), transparent 34%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(229, 237, 233, 0.86)),
@@ -1027,8 +1031,10 @@ section[id] {
 .session-section {
   display: grid;
   grid-template-columns: minmax(300px, 0.72fr) minmax(520px, 1fr);
-  gap: 46px;
+  gap: 34px;
   align-items: center;
+  padding-top: 58px;
+  padding-bottom: 58px;
   background:
     linear-gradient(180deg, var(--bg-soft), #eef4f0 100%);
 }
@@ -1042,9 +1048,9 @@ section[id] {
 
 .session-demo {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) 248px;
-  gap: 14px;
-  padding: 14px;
+  grid-template-columns: minmax(280px, 1fr) 236px;
+  gap: 12px;
+  padding: 12px;
   border: 1px solid rgba(13, 90, 81, 0.14);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.74);
@@ -1053,7 +1059,7 @@ section[id] {
 }
 
 .demo-visual {
-  min-height: 380px;
+  min-height: 340px;
   border-radius: var(--radius);
   background:
     linear-gradient(135deg, rgba(6, 63, 61, 0.96), rgba(9, 45, 46, 0.98)),
@@ -1065,17 +1071,17 @@ section[id] {
 .demo-screen {
   display: grid;
   grid-template-rows: auto 1fr auto auto;
-  gap: 16px;
+  gap: 13px;
   height: 100%;
-  min-height: 380px;
-  padding: 20px;
+  min-height: 340px;
+  padding: 18px;
 }
 
 .demo-topline {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.82rem;
@@ -1089,12 +1095,12 @@ section[id] {
 .demo-signal {
   display: grid;
   align-content: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .demo-signal span {
   display: block;
-  height: 34px;
+  height: 28px;
   border-radius: 999px;
   background:
     linear-gradient(90deg, transparent 0 4%, rgba(157, 216, 189, 0.8) 4% 5%, transparent 5% 14%, rgba(116, 191, 208, 0.7) 14% 16%, transparent 16% 26%, rgba(217, 138, 13, 0.76) 26% 27%, transparent 27% 42%, rgba(157, 216, 189, 0.76) 42% 44%, transparent 44% 58%, rgba(116, 191, 208, 0.72) 58% 61%, transparent 61% 72%, rgba(217, 138, 13, 0.72) 72% 74%, transparent 74% 100%),
@@ -1135,8 +1141,8 @@ section[id] {
 
 .demo-score {
   display: grid;
-  gap: 6px;
-  padding: 18px;
+  gap: 5px;
+  padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.06);
@@ -1152,7 +1158,7 @@ section[id] {
 .demo-score strong {
   display: block;
   color: white;
-  font-size: 2.65rem;
+  font-size: 2.36rem;
   font-weight: 560;
   line-height: 1;
 }
@@ -1186,10 +1192,10 @@ section[id] {
 
 .demo-steps button {
   display: grid;
-  grid-template-columns: 38px 1fr;
-  gap: 6px 12px;
-  min-height: 66px;
-  padding: 12px;
+  grid-template-columns: 34px 1fr;
+  gap: 5px 10px;
+  min-height: 60px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(251, 250, 246, 0.78);
@@ -1215,8 +1221,8 @@ section[id] {
   grid-row: span 2;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   border-radius: 999px;
   background: rgba(13, 90, 81, 0.09);
   color: var(--teal);
@@ -1241,17 +1247,18 @@ section[id] {
 
 .workflow {
   background: var(--bg-soft);
-  padding-top: 64px;
+  padding-top: 54px;
+  padding-bottom: 60px;
 }
 
 .workflow-heading {
   max-width: 690px;
-  margin: 0 auto 38px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
 .workflow-heading h2 {
-  font-size: 2.7rem;
+  font-size: 2.44rem;
   line-height: 1.12;
 }
 
@@ -1265,7 +1272,7 @@ section[id] {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 
 .workflow-grid::before {
@@ -1281,7 +1288,7 @@ section[id] {
 .step {
   position: relative;
   min-width: 0;
-  padding-top: 34px;
+  padding-top: 28px;
 }
 
 .step-number {
@@ -1309,7 +1316,7 @@ section[id] {
   z-index: 1;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 1 / 0.78;
+  aspect-ratio: 1 / 0.68;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.72);
@@ -1319,7 +1326,7 @@ section[id] {
 .step-image {
   display: grid;
   place-items: center;
-  padding: 14px;
+  padding: 12px;
 }
 
 .step-image picture,
@@ -1365,7 +1372,7 @@ section[id] {
 .step-score {
   display: grid;
   align-content: center;
-  padding: 16px;
+  padding: 14px;
 }
 
 .step-score span,
@@ -1377,7 +1384,7 @@ section[id] {
 
 .step-score strong {
   color: var(--teal-dark);
-  font-size: 3.45rem;
+  font-size: 3rem;
   font-weight: 520;
   line-height: 1;
 }
@@ -1443,9 +1450,9 @@ section[id] {
   z-index: 4;
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  margin: -28px 0 14px 16px;
+  width: 36px;
+  height: 36px;
+  margin: -24px 0 12px 14px;
   border: 3px solid rgba(251, 250, 246, 0.92);
   border-radius: 999px;
   background: var(--teal);
@@ -2107,7 +2114,7 @@ section[id] {
   }
 
   .hero h1 {
-    font-size: 2.78rem;
+    font-size: 2.58rem;
   }
 
   .problem-copy h2,
@@ -2116,9 +2123,9 @@ section[id] {
   .workflow-heading h2,
   .science h2,
   .use-cases-heading h2,
-    .kit-copy h2,
-    .contact-band h2 {
-    font-size: 2.5rem;
+  .kit-copy h2,
+  .contact-band h2 {
+    font-size: 2.3rem;
   }
 
   .session-demo {
@@ -2131,7 +2138,7 @@ section[id] {
 
   .demo-steps button {
     grid-template-columns: 1fr;
-    min-height: 112px;
+    min-height: 94px;
   }
 
   .demo-steps span {
@@ -2206,7 +2213,7 @@ section[id] {
 
   .proof-strip {
     gap: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   .proof-item,
@@ -2222,7 +2229,7 @@ section[id] {
   .science,
   .kit-section,
   .contact-band {
-    gap: 32px;
+    gap: 28px;
   }
 
   .workflow-grid {
@@ -2316,7 +2323,7 @@ section[id] {
 
   .hero h1 {
     max-width: 12em;
-    font-size: 1.72rem;
+    font-size: 1.86rem;
     line-height: 1.16;
   }
 
@@ -2326,9 +2333,9 @@ section[id] {
   .workflow-heading h2,
   .science h2,
   .use-cases-heading h2,
-    .kit-copy h2,
-    .contact-band h2 {
-    font-size: 1.98rem;
+  .kit-copy h2,
+  .contact-band h2 {
+    font-size: 1.9rem;
   }
 
   .hero p,
@@ -2365,26 +2372,36 @@ section[id] {
   }
 
   .problem-section,
+  .thesis-section,
   .session-section,
   .use-cases,
   .kit-section,
   .contact-band {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 46px;
+    padding-bottom: 48px;
   }
 
   .workflow {
-    padding-top: 50px;
-    padding-bottom: 56px;
+    padding-top: 44px;
+    padding-bottom: 48px;
   }
 
   .proof-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-top: 0;
-    padding-bottom: 34px;
+    padding-bottom: 26px;
   }
 
   .proof-item {
-    padding: 18px;
+    padding: 14px;
+  }
+
+  .proof-item strong {
+    font-size: 0.9rem;
+  }
+
+  .proof-item p {
+    font-size: 0.78rem;
   }
 
   .problem-list {

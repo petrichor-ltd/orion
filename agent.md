@@ -80,5 +80,6 @@
 
 - User feels the page is too stretched out and not concentrated enough; reduce vertical section length, empty spacing, and large gaps before adding any new sections.
 - The proof/problem area immediately after the hero should be more compact and information-dense. A 2x2 card layout is preferred over tall stacked items on desktop.
-- Current serif heading direction is not acceptable. Use a cleaner, more mature product-facing Traditional Chinese font system; `IBM Plex Sans TC` is preferred for headings and UI, with `Noto Sans TC` as fallback.
-- Copy should push harder toward product value and decision-making: emphasize runnable testing, comparable EEG indicators, recommendation, report delivery, and follow-up momentum.
+- Typography should feel more literary without becoming decorative: use a warm Traditional Chinese serif for major headings and a clean sans-serif for UI/body copy.
+- Copy should push harder toward product value and decision-making: emphasize runnable on-site testing, six-aroma comparison, comparable EEG indicators, report delivery, and follow-up momentum.
+- Avoid section transitions that feel like accidental blank space; report/product proof sections should connect tightly after the problem cards.
