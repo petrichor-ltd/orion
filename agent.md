@@ -83,3 +83,9 @@
 - Typography should feel more literary without becoming decorative: use a warm Traditional Chinese serif for major headings and a clean sans-serif for UI/body copy.
 - Copy should push harder toward product value and decision-making: emphasize runnable on-site testing, six-aroma comparison, comparable EEG indicators, report delivery, and follow-up momentum.
 - Avoid section transitions that feel like accidental blank space; report/product proof sections should connect tightly after the problem cards.
+
+## 2026-06-15 prompt
+
+- User feedback: the serif heading direction is not working; keep title and body typography unified in a clean Traditional Chinese sans-serif system.
+- Content should be simpler and easier for users to read, while still signaling product maturity for professional and funding-oriented readers.
+- Keep Traditional Chinese and English messaging in sync: same hierarchy, same claims, similarly concise density.
