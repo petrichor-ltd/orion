@@ -207,11 +207,11 @@ const translations = {
     },
     team: {
       kicker: "關於團隊",
-      title: "從腦波訊號到可交付報告，打造完整的軟硬體研究系統。",
+      title: "從腦波訊號到報告，整合成一套完整系統。",
       body:
-        "欖亞顧問股份有限公司以使用者需求為起點，整合 Android 應用、嵌入式架構、設備資料串流、演算法驗證與場域測試，將腦波擷取、測試引導、結果分析與報告輸出收斂為可穩定運作的產品流程。",
+        "欖亞顧問股份有限公司以真實使用需求為起點，整合 Android、嵌入式架構、設備資料串流、演算法驗證與場域測試，完成從腦波擷取到報告交付的一體化產品流程。",
       leadershipBody:
-        "Orion 由具美國知名外商經驗的資深工程師與技術主管，攜手投資專業人士、商業拓展主管、區域商業總監與財務分析總監共同打造。從系統架構、產品策略到市場導入，每項決策同時兼顧技術可行性、使用體驗與商業價值。",
+        "Orion 由具美國知名外商經驗的資深工程師與技術主管，攜手投資專業人士、商業拓展主管、區域商業總監及財務分析總監共同打造，兼顧系統架構、使用體驗與商業落地。",
       companyLabel: "公司資訊",
       companyName: "欖亞顧問股份有限公司",
       taxIdLabel: "統一編號",
@@ -487,11 +487,11 @@ const translations = {
     },
     team: {
       kicker: "About the team",
-      title: "From EEG signal to deliverable report, built as one integrated research system.",
+      title: "From EEG signal to report, built as one integrated system.",
       body:
-        "Petrichor Consulting Co., Ltd. starts with real user needs and integrates the Android application, embedded architecture, device data streaming, algorithm validation, and field testing into a stable product flow spanning EEG capture, guided testing, analysis, and report delivery.",
+        "Petrichor Consulting Co., Ltd. integrates Android, embedded systems, device data streaming, algorithm validation, and field testing into one stable flow from EEG capture to report delivery.",
       leadershipBody:
-        "Orion is built by senior engineers and technology leaders with experience at leading U.S. multinational companies, working alongside investment professionals, business development leaders, regional commercial directors, and financial analysis directors. From system architecture and product strategy to market adoption, every decision balances technical feasibility, user experience, and commercial value.",
+        "Orion is built by senior engineers and technology leaders with experience at leading U.S. multinationals, together with investment professionals, business development leaders, regional commercial directors, and financial analysis directors. The result is a system shaped for technical integrity, user experience, and commercial adoption.",
       companyLabel: "Company information",
       companyName: "Petrichor Consulting Co., Ltd.",
       taxIdLabel: "Unified Business No.",
@@ -588,7 +588,7 @@ const getCurrentLanguage = () => (document.documentElement.lang === "en" ? "en" 
 
 const applyDemoBookingVisibility = () => {
   const isVisible = SHOW_DEMO_BOOKING === 1;
-  document.documentElement.dataset.demoBooking = isVisible ? "1" : "0";
+  document.documentElement.dataset.demoBookingEnabled = isVisible ? "1" : "0";
   demoBookingElements.forEach((element) => {
     element.hidden = !isVisible;
   });
