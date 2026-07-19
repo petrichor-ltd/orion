@@ -1,0 +1,126 @@
+% Orion — editorial procurement pitch theme.
+% Visual source: the user's Petrichor reference deck; rebuilt with fewer UI panels,
+% larger type, hard editorial grids, and evidence-led photography.
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\setCJKmainfont{PingFang TC}
+\setCJKsansfont{PingFang TC}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip=0pt plus 1pt
+
+\definecolor{V5Paper}{HTML}{FBF8F3}
+\definecolor{V5White}{HTML}{FFFFFF}
+\definecolor{V5Ink}{HTML}{2D2926}
+\definecolor{V5Muted}{HTML}{6E6862}
+\definecolor{V5Blue}{HTML}{006FBA}
+\definecolor{V5BlueDark}{HTML}{174A69}
+\definecolor{V5Coral}{HTML}{C65A4A}
+\definecolor{V5Sage}{HTML}{607A70}
+\definecolor{V5Wine}{HTML}{784B58}
+\definecolor{V5Sand}{HTML}{E9E1D8}
+\definecolor{V5SandLight}{HTML}{F2ECE6}
+\definecolor{V5Line}{HTML}{CFC5BC}
+\definecolor{V5PaleBlue}{HTML}{E7F0F5}
+\definecolor{V5PaleSage}{HTML}{E8EEEB}
+\definecolor{V5PaleWine}{HTML}{F1E8EB}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\setbeameroption{hide notes}
+\setbeamersize{text margin left=0mm,text margin right=0mm}
+\setbeamercolor{background canvas}{bg=V5Paper}
+\setbeamercolor{normal text}{fg=V5Ink,bg=V5Paper}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\textblockorigin{0mm}{0mm}
+
+\newcommand{\VPlace}[4]{\begin{textblock*}{#1mm}(#2mm,#3mm)#4\end{textblock*}}
+\newcommand{\VBlock}[5]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \path[fill=#5,draw=none] (0,0) rectangle (#1,#2);
+  \end{tikzpicture}}%
+}
+\newcommand{\VOutline}[5]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \path[fill=none,draw=#5,line width=.25mm] (.15,.15) rectangle ({#1-.15},{#2-.15});
+  \end{tikzpicture}}%
+}
+\newcommand{\VRule}[3]{\VPlace{#1}{#2}{#3}{{\color{V5Line}\rule{#1mm}{.32mm}}}}
+\newcommand{\VAccentRule}[3]{\VPlace{#1}{#2}{#3}{{\color{V5Blue}\rule{#1mm}{.6mm}}}}
+% Cropped photo frames without distorting the source image.
+\newcommand{\VPhotoH}[7]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \clip (0,0) rectangle (#1,#2);
+    \node[anchor=center,inner sep=0,xshift=#6mm,yshift=#7mm] at ({#1/2},{#2/2})
+      {\includegraphics[height=#2mm]{#5}};
+  \end{tikzpicture}}%
+}
+\newcommand{\VPhotoW}[7]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \clip (0,0) rectangle (#1,#2);
+    \node[anchor=center,inner sep=0,xshift=#6mm,yshift=#7mm] at ({#1/2},{#2/2})
+      {\includegraphics[width=#1mm]{#5}};
+  \end{tikzpicture}}%
+}
+% A zoomed width-crop for interface evidence that must remain legible in projection.
+\newcommand{\VPhotoZoomW}[8]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \clip (0,0) rectangle (#1,#2);
+    \node[anchor=center,inner sep=0,xshift=#7mm,yshift=#8mm] at ({#1/2},{#2/2})
+      {\includegraphics[width=#6mm]{#5}};
+  \end{tikzpicture}}%
+}
+\newcommand{\VShade}[6]{%
+  \VPlace{#1}{#3}{#4}{\begin{tikzpicture}[x=1mm,y=1mm]
+    \path[fill=#5,opacity=#6,draw=none] (0,0) rectangle (#1,#2);
+  \end{tikzpicture}}%
+}
+
+\newcommand{\VTitle}[1]{\VPlace{144}{8}{6.5}{{\fontsize{21}{25.5}\selectfont\bfseries\color{V5Ink}#1}}}
+\newcommand{\VTitleBlue}[1]{\VPlace{144}{8}{6.5}{{\fontsize{21}{25.5}\selectfont\bfseries\color{V5BlueDark}#1}}}
+\newcommand{\VTitleLight}[1]{\VPlace{144}{8}{6.5}{{\fontsize{21}{25.5}\selectfont\bfseries\color{V5White}#1}}}
+\newcommand{\VKicker}[1]{{\fontsize{9.8}{12}\selectfont\bfseries\color{V5Blue}\MakeUppercase{#1}}}
+\newcommand{\VKickerLight}[1]{{\fontsize{9.8}{12}\selectfont\bfseries\color{V5White}#1}}
+\newcommand{\VLead}[1]{{\fontsize{14.8}{19}\selectfont\bfseries\color{V5Ink}#1}}
+\newcommand{\VLeadBlue}[1]{{\fontsize{14.8}{19}\selectfont\bfseries\color{V5BlueDark}#1}}
+\newcommand{\VBody}[1]{{\fontsize{11.8}{15.5}\selectfont\color{V5Ink}#1}}
+\newcommand{\VBodyLight}[1]{{\fontsize{11.8}{15.5}\selectfont\color{V5White}#1}}
+\newcommand{\VSmall}[1]{{\fontsize{9.4}{12.2}\selectfont\color{V5Muted}#1}}
+\newcommand{\VSmallLight}[1]{{\fontsize{9.4}{12.2}\selectfont\color{V5White}#1}}
+\newcommand{\VSource}[1]{{\fontsize{7.2}{9.2}\selectfont\color{V5Muted}#1}}
+\newcommand{\VSourceLight}[1]{{\fontsize{7.2}{9.2}\selectfont\color{V5White}#1}}
+\newcommand{\VLabel}[1]{{\fontsize{10.8}{13.8}\selectfont\bfseries\color{V5Ink}#1}}
+\newcommand{\VLabelBlue}[1]{{\fontsize{10.8}{13.8}\selectfont\bfseries\color{V5BlueDark}#1}}
+\newcommand{\VMetric}[1]{{\fontsize{27}{30}\selectfont\bfseries\color{V5Blue}#1}}
+\newcommand{\VMetricDark}[1]{{\fontsize{27}{30}\selectfont\bfseries\color{V5Ink}#1}}
+\newcommand{\VArrow}{{\fontsize{20}{20}\selectfont\color{V5Coral}$\rightarrow$}}
+\newcommand{\VFolio}[1]{\VPlace{34}{118}{86.7}{{\fontsize{6.8}{8}\selectfont\color{V5Muted}\hfill#1\enspace 欖亞顧問}}}
+\newcommand{\VFooterLight}[1]{\VPlace{38}{114}{86.7}{{\fontsize{6.8}{8}\selectfont\color{V5White}\hfill#1\enspace 欖亞顧問}}}
+\newcommand{\VSourceLine}[1]{\VPlace{112}{8}{83}{\VSource{#1}}}
+
+\newcommand{\VTableHead}{\cellcolor{V5BlueDark}\color{V5White}\bfseries}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newenvironment{VSlide}{%
+  \setbeamercolor{background canvas}{bg=V5Paper}%
+  \setbeamercolor{normal text}{fg=V5Ink,bg=V5Paper}%
+  \begin{frame}[plain]%
+}{\end{frame}}
+
+\graphicspath{{../../assets/}{../../assets/reference-petrichor/}{../../assets/client-ainia/}{../../assets/client-jourdeness/}{../../assets/client-ainia-v5/}{../../assets/client-jourdeness-v5/}{../../deliverables/}}
+\hypersetup{colorlinks=true,urlcolor=V5Blue,linkcolor=V5Blue}

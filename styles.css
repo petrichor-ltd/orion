@@ -34,6 +34,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -498,6 +502,7 @@ p {
 .science h2,
 .use-cases-heading h2,
 .kit-copy h2,
+.team-intro h2,
 .contact-band h2 {
   margin: 0;
   color: var(--ink);
@@ -526,6 +531,7 @@ html[lang="zh-Hant"] .workflow-heading h2,
 html[lang="zh-Hant"] .science h2,
 html[lang="zh-Hant"] .use-cases-heading h2,
 html[lang="zh-Hant"] .kit-copy h2,
+html[lang="zh-Hant"] .team-intro h2,
 html[lang="zh-Hant"] .contact-band h2 {
   font-weight: 700;
   line-height: 1.12;
@@ -624,7 +630,8 @@ html[lang="zh-Hant"] .contact-band h2 {
 .thesis-section,
 .session-section,
 .use-cases,
-.kit-section {
+.kit-section,
+.team-section {
   padding: 64px max(24px, calc((100vw - var(--max)) / 2));
 }
 
@@ -1884,6 +1891,134 @@ section[id] {
   transform: translateY(-50%);
 }
 
+.team-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.55fr);
+  gap: 46px 60px;
+  background: #e8efec;
+  border-top: 1px solid rgba(13, 90, 81, 0.1);
+}
+
+.team-intro {
+  max-width: 760px;
+}
+
+.team-intro h2 {
+  max-width: 16em;
+  font-size: 2.72rem;
+}
+
+.team-intro p {
+  max-width: 740px;
+  margin: 20px 0 0;
+  color: var(--muted-strong);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.team-intro .team-leadership {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(13, 90, 81, 0.16);
+  color: var(--teal-ink);
+  font-weight: 560;
+}
+
+.company-record {
+  align-self: stretch;
+  padding-left: 34px;
+  border-left: 1px solid rgba(13, 90, 81, 0.2);
+}
+
+.company-record > span {
+  color: var(--teal);
+  font-size: 0.76rem;
+  font-weight: 820;
+}
+
+.company-record > strong {
+  display: block;
+  margin-top: 14px;
+  color: var(--teal-ink);
+  font-size: 1.28rem;
+  line-height: 1.45;
+}
+
+.company-record dl {
+  margin: 28px 0 0;
+}
+
+.company-record dl div {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.58fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(13, 90, 81, 0.16);
+}
+
+.company-record dt,
+.company-record dd {
+  margin: 0;
+}
+
+.company-record dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.company-record dd {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 760;
+  text-align: right;
+}
+
+.team-capabilities {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(13, 90, 81, 0.18);
+  border-bottom: 1px solid rgba(13, 90, 81, 0.18);
+}
+
+.team-capabilities article {
+  min-width: 0;
+  padding: 24px 28px 26px;
+}
+
+.team-capabilities article:first-child {
+  padding-left: 0;
+}
+
+.team-capabilities article:last-child {
+  padding-right: 0;
+}
+
+.team-capabilities article + article {
+  border-left: 1px solid rgba(13, 90, 81, 0.18);
+}
+
+.team-capabilities span {
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 820;
+}
+
+.team-capabilities h3 {
+  margin: 10px 0 0;
+  color: var(--teal-ink);
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+.team-capabilities p {
+  margin: 9px 0 0;
+  color: var(--muted-strong);
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
 .contact-band {
   position: relative;
   display: grid;
@@ -2023,11 +2158,18 @@ section[id] {
 .site-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 22px max(24px, calc((100vw - var(--max)) / 2));
   background: #061f20;
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.82rem;
+}
+
+.site-footer span:first-child {
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 720;
 }
 
 .reveal {
@@ -2125,6 +2267,7 @@ section[id] {
   .science h2,
   .use-cases-heading h2,
   .kit-copy h2,
+  .team-intro h2,
   .contact-band h2 {
     font-size: 2.3rem;
   }
@@ -2208,6 +2351,7 @@ section[id] {
   .workflow-grid,
   .science,
   .kit-section,
+  .team-section,
   .contact-band {
     grid-template-columns: 1fr;
   }
@@ -2229,8 +2373,16 @@ section[id] {
   .session-section,
   .science,
   .kit-section,
+  .team-section,
   .contact-band {
     gap: 28px;
+  }
+
+  .company-record {
+    padding-top: 26px;
+    padding-left: 0;
+    border-top: 1px solid rgba(13, 90, 81, 0.18);
+    border-left: 0;
   }
 
   .workflow-grid {
@@ -2335,6 +2487,7 @@ section[id] {
   .science h2,
   .use-cases-heading h2,
   .kit-copy h2,
+  .team-intro h2,
   .contact-band h2 {
     font-size: 1.9rem;
   }
@@ -2343,7 +2496,8 @@ section[id] {
   .problem-copy p,
   .session-copy p,
   .use-cases-heading p,
-  .kit-copy p {
+  .kit-copy p,
+  .team-intro p {
     font-size: 0.94rem;
   }
 
@@ -2366,6 +2520,7 @@ section[id] {
   .session-section,
   .use-cases,
   .kit-section,
+  .team-section,
   .contact-band,
   .proof-strip {
     padding-left: 18px;
@@ -2377,6 +2532,7 @@ section[id] {
   .session-section,
   .use-cases,
   .kit-section,
+  .team-section,
   .contact-band {
     padding-top: 46px;
     padding-bottom: 48px;
@@ -2587,6 +2743,33 @@ section[id] {
 
   .use-card span {
     margin-bottom: 18px;
+  }
+
+  .team-intro h2 {
+    font-size: 1.9rem;
+  }
+
+  .team-intro p {
+    line-height: 1.72;
+  }
+
+  .company-record dl div {
+    grid-template-columns: minmax(100px, 0.7fr) minmax(0, 1fr);
+  }
+
+  .team-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .team-capabilities article,
+  .team-capabilities article:first-child,
+  .team-capabilities article:last-child {
+    padding: 20px 0;
+  }
+
+  .team-capabilities article + article {
+    border-top: 1px solid rgba(13, 90, 81, 0.18);
+    border-left: 0;
   }
 
   .lead-form {

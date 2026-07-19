@@ -1,4 +1,5 @@
 const DEMO_EMAIL = "toby.liao@petrichor.tw";
+const SHOW_DEMO_BOOKING = 0;
 
 const translations = {
   zh: {
@@ -25,13 +26,14 @@ const translations = {
       analytics: "動態 EEG 分析預覽",
       demoIntents: "預約目的",
       leadForm: "Orion 展示預約表單",
+      companyRecord: "公司登記資訊",
     },
     nav: {
       product: "產品",
       workflow: "流程",
       science: "信任",
       useCases: "對象",
-      contact: "聯絡",
+      team: "團隊",
     },
     cta: {
       demo: "預約展示",
@@ -196,12 +198,31 @@ const translations = {
       item4: "測試結果、PDF 報告與雲端資料存儲",
     },
     aromas: {
-      frankincense: "乳香",
-      vetiver: "岩蘭草",
-      sage: "鼠尾草",
-      ylang: "依蘭",
-      orange: "甜橙",
-      lavender: "薰衣草",
+      frankincense: "C000",
+      vetiver: "C001",
+      sage: "C002",
+      ylang: "C003",
+      orange: "C004",
+      lavender: "C005",
+    },
+    team: {
+      kicker: "關於團隊",
+      title: "從腦波訊號到可交付報告，打造完整的軟硬體研究系統。",
+      body:
+        "欖亞顧問股份有限公司以使用者需求為起點，整合 Android 應用、嵌入式架構、設備資料串流、演算法驗證與場域測試，將腦波擷取、測試引導、結果分析與報告輸出收斂為可穩定運作的產品流程。",
+      leadershipBody:
+        "Orion 由具美國知名外商經驗的資深工程師與技術主管，攜手投資專業人士、商業拓展主管、區域商業總監與財務分析總監共同打造。從系統架構、產品策略到市場導入，每項決策同時兼顧技術可行性、使用體驗與商業價值。",
+      companyLabel: "公司資訊",
+      companyName: "欖亞顧問股份有限公司",
+      taxIdLabel: "統一編號",
+      productLabel: "核心產品",
+      productValue: "Orion AI",
+      discoveryTitle: "需求研究與產品驗證",
+      discoveryBody: "從使用情境、測試流程到功能驗證，讓每次產品迭代回到真實需求。",
+      integrationTitle: "程式與軟硬體整合",
+      integrationBody: "整合 Muse EEG、Android 應用、嵌入式架構與設備資料串流。",
+      iterationTitle: "產品成熟與場域導入",
+      iterationBody: "以實際測試持續改善連線、操作、資料與報告品質。",
     },
     contact: {
       kicker: "預約展示",
@@ -248,6 +269,7 @@ const translations = {
       mailClosing: "謝謝，期待與你們聯絡。",
     },
     footer: {
+      company: "欖亞顧問股份有限公司 · 統一編號 00230169",
       product: "Orion EEG 香氛研究平台",
       summary: "僅用於研究與產品評估，不作為醫療診斷工具。",
     },
@@ -284,13 +306,14 @@ const translations = {
       analytics: "Animated EEG analytics preview",
       demoIntents: "Demo intents",
       leadForm: "Orion demo request form",
+      companyRecord: "Company registration information",
     },
     nav: {
       product: "Product",
       workflow: "Workflow",
       science: "Trust",
       useCases: "Use cases",
-      contact: "Contact",
+      team: "Team",
     },
     cta: {
       demo: "Book a research demo",
@@ -455,12 +478,31 @@ const translations = {
       item4: "Session results, PDF reports, and cloud data storage",
     },
     aromas: {
-      frankincense: "Frank.",
-      vetiver: "Vetiver",
-      sage: "Sage",
-      ylang: "Ylang",
-      orange: "Orange",
-      lavender: "Lavender",
+      frankincense: "C000",
+      vetiver: "C001",
+      sage: "C002",
+      ylang: "C003",
+      orange: "C004",
+      lavender: "C005",
+    },
+    team: {
+      kicker: "About the team",
+      title: "From EEG signal to deliverable report, built as one integrated research system.",
+      body:
+        "欖亞顧問股份有限公司 starts with real user needs and integrates the Android application, embedded architecture, device data streaming, algorithm validation, and field testing into a stable product flow spanning EEG capture, guided testing, analysis, and report delivery.",
+      leadershipBody:
+        "Orion is built by senior engineers and technology leaders with experience at leading U.S. multinational companies, working alongside investment professionals, business development leaders, regional commercial directors, and financial analysis directors. From system architecture and product strategy to market adoption, every decision balances technical feasibility, user experience, and commercial value.",
+      companyLabel: "Company information",
+      companyName: "欖亞顧問股份有限公司",
+      taxIdLabel: "Unified Business No.",
+      productLabel: "Core product",
+      productValue: "Orion AI",
+      discoveryTitle: "User needs and validation",
+      discoveryBody: "Translate real usage contexts and test workflows into verified product requirements.",
+      integrationTitle: "Hardware-software integration",
+      integrationBody: "Integrate Muse EEG, the Android application, embedded architecture, and device data streaming.",
+      iterationTitle: "Product maturity and adoption",
+      iterationBody: "Use real testing to improve connectivity, operation, data quality, and report delivery.",
     },
     contact: {
       kicker: "Book a demo",
@@ -507,6 +549,7 @@ const translations = {
       mailClosing: "Thank you. I look forward to speaking with you.",
     },
     footer: {
+      company: "欖亞顧問股份有限公司 · Unified Business No. 00230169",
       product: "Orion EEG Fragrance Research Platform",
       summary: "Research and product evaluation only. Not for medical diagnosis.",
     },
@@ -533,6 +576,7 @@ const sessionCaption = document.querySelector("[data-session-caption]");
 const leadForm = document.querySelector("[data-lead-form]");
 const formStatus = document.querySelector("[data-form-status]");
 const tiltTargets = document.querySelectorAll("[data-tilt]");
+const demoBookingElements = document.querySelectorAll("[data-demo-booking]");
 
 let activeSessionStep = 0;
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -541,6 +585,14 @@ const getValue = (language, key) =>
   key.split(".").reduce((value, part) => (value ? value[part] : undefined), translations[language]);
 
 const getCurrentLanguage = () => (document.documentElement.lang === "en" ? "en" : "zh");
+
+const applyDemoBookingVisibility = () => {
+  const isVisible = SHOW_DEMO_BOOKING === 1;
+  document.documentElement.dataset.demoBooking = isVisible ? "1" : "0";
+  demoBookingElements.forEach((element) => {
+    element.hidden = !isVisible;
+  });
+};
 
 const optionLabelKeys = {
   role: {
@@ -589,6 +641,7 @@ const buildLeadMailto = (formData, language = getCurrentLanguage()) => {
   return `mailto:${DEMO_EMAIL}?subject=${encodeURIComponent(copy.mailSubject)}&body=${encodeURIComponent(body)}`;
 };
 
+window.OrionConfig = { showDemoBooking: SHOW_DEMO_BOOKING === 1 };
 window.OrionLead = { buildMailto: buildLeadMailto };
 
 const updateMenuLabel = () => {
@@ -683,7 +736,7 @@ tiltTargets.forEach((target) => {
   });
 });
 
-if (leadForm) {
+if (SHOW_DEMO_BOOKING === 1 && leadForm) {
   leadForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const mailto = buildLeadMailto(new FormData(leadForm), getCurrentLanguage());
@@ -823,25 +876,28 @@ createCanvasRenderer(document.querySelector("[data-wave-canvas]"), (ctx, width, 
   }
 });
 
-createCanvasRenderer(document.querySelector("[data-particle-canvas]"), (ctx, width, height, time) => {
-  ctx.clearRect(0, 0, width, height);
-  const t = time * 0.0005;
-  const rows = 18;
-  const cols = Math.ceil(width / 30);
+if (SHOW_DEMO_BOOKING === 1) {
+  createCanvasRenderer(document.querySelector("[data-particle-canvas]"), (ctx, width, height, time) => {
+    ctx.clearRect(0, 0, width, height);
+    const t = time * 0.0005;
+    const rows = 18;
+    const cols = Math.ceil(width / 30);
 
-  for (let row = 0; row < rows; row += 1) {
-    for (let col = 0; col < cols; col += 1) {
-      const x = col * 30 + (row % 2) * 15;
-      const wave = Math.sin(col * 0.42 + row * 0.36 + t) * 26;
-      const y = height * 0.58 + row * 18 + wave - col * 1.4;
-      if (y < height * 0.32 || y > height + 20) continue;
-      const alpha = 0.08 + row * 0.011;
-      ctx.beginPath();
-      ctx.arc(x, y, 1.6, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(157, 216, 189, ${alpha})`;
-      ctx.fill();
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < cols; col += 1) {
+        const x = col * 30 + (row % 2) * 15;
+        const wave = Math.sin(col * 0.42 + row * 0.36 + t) * 26;
+        const y = height * 0.58 + row * 18 + wave - col * 1.4;
+        if (y < height * 0.32 || y > height + 20) continue;
+        const alpha = 0.08 + row * 0.011;
+        ctx.beginPath();
+        ctx.arc(x, y, 1.6, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(157, 216, 189, ${alpha})`;
+        ctx.fill();
+      }
     }
-  }
-});
+  });
+}
 
+applyDemoBookingVisibility();
 applyLanguage("zh");
