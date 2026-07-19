@@ -233,3 +233,7 @@
 - Refer to the business-development role once as `商業拓展主管`; do not repeat separate staff and manager versions of the same function.
 - Team copy should address buyers directly through product confidence, not explain a second marketing rationale to them.
 - Keep the leadership paragraph concise: establish cross-functional senior experience, then connect it to technical feasibility, user experience, commercial value, and market adoption.
+
+## 2026-07-19 prompt 23
+
+- The official English company name is `Petrichor Consulting Co., Ltd.`. Use it throughout the English website; keep `欖亞顧問股份有限公司` in Traditional Chinese.

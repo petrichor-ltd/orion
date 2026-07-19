@@ -489,11 +489,11 @@ const translations = {
       kicker: "About the team",
       title: "From EEG signal to deliverable report, built as one integrated research system.",
       body:
-        "欖亞顧問股份有限公司 starts with real user needs and integrates the Android application, embedded architecture, device data streaming, algorithm validation, and field testing into a stable product flow spanning EEG capture, guided testing, analysis, and report delivery.",
+        "Petrichor Consulting Co., Ltd. starts with real user needs and integrates the Android application, embedded architecture, device data streaming, algorithm validation, and field testing into a stable product flow spanning EEG capture, guided testing, analysis, and report delivery.",
       leadershipBody:
         "Orion is built by senior engineers and technology leaders with experience at leading U.S. multinational companies, working alongside investment professionals, business development leaders, regional commercial directors, and financial analysis directors. From system architecture and product strategy to market adoption, every decision balances technical feasibility, user experience, and commercial value.",
       companyLabel: "Company information",
-      companyName: "欖亞顧問股份有限公司",
+      companyName: "Petrichor Consulting Co., Ltd.",
       taxIdLabel: "Unified Business No.",
       productLabel: "Core product",
       productValue: "Orion AI",
@@ -549,7 +549,7 @@ const translations = {
       mailClosing: "Thank you. I look forward to speaking with you.",
     },
     footer: {
-      company: "欖亞顧問股份有限公司 · Unified Business No. 00230169",
+      company: "Petrichor Consulting Co., Ltd. · Unified Business No. 00230169",
       product: "Orion EEG Fragrance Research Platform",
       summary: "Research and product evaluation only. Not for medical diagnosis.",
     },
