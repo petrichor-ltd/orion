@@ -237,3 +237,27 @@
 ## 2026-07-19 prompt 23
 
 - The official English company name is `Petrichor Consulting Co., Ltd.`. Use it throughout the English website; keep `欖亞顧問股份有限公司` in Traditional Chinese.
+
+## 2026-07-20 prompt 24
+
+- Before closing a website revision, rerun the complete pending-work audit: static syntax, bilingual content, feature-flag state, sample codes, legal company details, navigation, desktop layout, and mobile overflow.
+- A task is not complete merely because the requested text exists; verify the rendered state and confirm hidden sections do not leave dead navigation or background work.
+
+## 2026-07-20 prompt 25
+
+- When an in-progress visual review is interrupted, resume from the latest verified state and finish the remaining checks without reopening completed design decisions.
+
+## 2026-07-20 prompt 26
+
+- Public website copy and imagery must use brand-neutral EEG terminology. Do not expose third-party hardware brand names, logos, product variants, or brand-specific alt text.
+- Traditional Chinese uses `整合腦波 EEG` for the kit capability; English uses `EEG`.
+- Keep the EEG headband visual, but use the approved no-brand image asset and neutral filename.
+
+## 2026-07-20 prompt 27
+
+- If image generation is interrupted, resume the same precise edit and reject outputs that alter the required product presentation or leave visible branding.
+
+## 2026-07-20 prompt 28
+
+- Removing an image background means delivering a real alpha-channel PNG/WebP; CSS blend modes are not an acceptable substitute.
+- Validate transparent corners, internal cutouts, edge color, and the final rendered composition before replacing a product asset in every website location.

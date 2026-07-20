@@ -45,7 +45,7 @@ const translations = {
     hero: {
       title: "用腦波，讓香氣反應被看見。",
       body:
-        "Orion 結合 Muse EEG、六款香氣樣本與 Android 測試流程，將嗅聞體驗轉成可比較、可交付的研究結果。",
+        "Orion 整合腦波 EEG、六款香氣樣本與 Android 測試流程，將嗅聞體驗轉成可比較、可交付的研究結果。",
     },
     proof: {
       device: "硬體與香氣套組完整",
@@ -141,8 +141,8 @@ const translations = {
       body: "連接、測試、評分、同步；每一步都能在展示現場驗證。",
     },
     step1: {
-      title: "連接 Muse",
-      body: "支援 Muse 2 / Muse S 連線與既有串流流程。",
+      title: "連接腦波設備",
+      body: "透過藍牙建立 EEG 資料串流。",
     },
     step2: {
       title: "執行香氣測試",
@@ -192,7 +192,7 @@ const translations = {
       kicker: "Orion 研究套組",
       title: "香氣樣本、測試流程、報告輸出整合在一起。",
       body: "一套工具支援現場展示、試行導入與研究討論。",
-      item1: "Muse 2 / Muse S 腦波擷取",
+      item1: "整合腦波 EEG",
       item2: "實際測試香氣樣本（6）",
       item3: "Android 系統與嵌入式架構",
       item4: "測試結果、PDF 報告與雲端資料存儲",
@@ -220,7 +220,7 @@ const translations = {
       discoveryTitle: "需求研究與產品驗證",
       discoveryBody: "從使用情境、測試流程到功能驗證，讓每次產品迭代回到真實需求。",
       integrationTitle: "程式與軟硬體整合",
-      integrationBody: "整合 Muse EEG、Android 應用、嵌入式架構與設備資料串流。",
+      integrationBody: "整合腦波 EEG、Android 應用、嵌入式架構與設備資料串流。",
       iterationTitle: "產品成熟與場域導入",
       iterationBody: "以實際測試持續改善連線、操作、資料與報告品質。",
     },
@@ -274,12 +274,12 @@ const translations = {
       summary: "僅用於研究與產品評估，不作為醫療診斷工具。",
     },
     alt: {
-      hero: "Muse 腦波頭帶與 Orion 測試介面的產品展示情境",
-      museDevice: "Muse 腦波頭帶",
+      hero: "腦波 EEG 頭帶與 Orion 測試介面的產品展示情境",
+      eegDevice: "腦波 EEG 頭帶",
       appScreenshot: "Orion Android 應用程式顯示即時腦波監測畫面",
       reportScreen: "Orion Android 應用程式顯示神經芳療分析報告",
       reportPdf: "Orion PDF 神經芳療腦波分析報告",
-      kit: "Orion 研究套組，包含 Muse 腦波頭帶、六款香氣樣本、平板分析畫面與擴香瓶",
+      kit: "Orion 研究套組，包含腦波 EEG 頭帶、六款香氣樣本、平板分析畫面與擴香瓶",
     },
   },
   en: {
@@ -325,7 +325,7 @@ const translations = {
     hero: {
       title: "Make fragrance response visible through EEG.",
       body:
-        "Orion combines Muse EEG, six aroma samples, and Android-guided testing to turn scent experience into comparable, deliverable research results.",
+        "Orion combines EEG, six aroma samples, and Android-guided testing to turn scent experience into comparable, deliverable research results.",
     },
     proof: {
       device: "Complete hardware and aroma kit",
@@ -421,8 +421,8 @@ const translations = {
       body: "Connect, test, score, and sync. Each step can be verified during the demo.",
     },
     step1: {
-      title: "Connect Muse",
-      body: "Support Muse 2 / Muse S and existing streaming workflows.",
+      title: "Connect EEG",
+      body: "Establish a Bluetooth EEG data stream.",
     },
     step2: {
       title: "Guided fragrance trials",
@@ -472,7 +472,7 @@ const translations = {
       kicker: "The Orion research kit",
       title: "Aroma samples, testing flow, and report output in one kit.",
       body: "One tool supports live demos, pilot trials, and research conversations.",
-      item1: "Muse 2 / Muse S EEG capture",
+      item1: "EEG",
       item2: "Real aroma test samples (6)",
       item3: "Android system with embedded architecture",
       item4: "Session results, PDF reports, and cloud data storage",
@@ -500,7 +500,7 @@ const translations = {
       discoveryTitle: "User needs and validation",
       discoveryBody: "Translate real usage contexts and test workflows into verified product requirements.",
       integrationTitle: "Hardware-software integration",
-      integrationBody: "Integrate Muse EEG, the Android application, embedded architecture, and device data streaming.",
+      integrationBody: "Integrate EEG, the Android application, embedded architecture, and device data streaming.",
       iterationTitle: "Product maturity and adoption",
       iterationBody: "Use real testing to improve connectivity, operation, data quality, and report delivery.",
     },
@@ -554,12 +554,12 @@ const translations = {
       summary: "Research and product evaluation only. Not for medical diagnosis.",
     },
     alt: {
-      hero: "Muse EEG headband and Orion test interface in a product scene",
-      museDevice: "Muse EEG headband",
+      hero: "EEG headband and Orion test interface in a product scene",
+      eegDevice: "EEG headband",
       appScreenshot: "Orion Android app showing a live EEG monitor",
       reportScreen: "Orion Android app showing a completed neuro-aroma analysis report",
       reportPdf: "Orion PDF neuro-aroma EEG analysis report",
-      kit: "Orion research kit with Muse EEG headband, six aroma samples, tablet analytics, and atomizer",
+      kit: "Orion research kit with EEG headband, six aroma samples, tablet analytics, and atomizer",
     },
   },
 };
